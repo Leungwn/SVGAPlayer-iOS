@@ -13,7 +13,7 @@
 @protocol SVGAPlayerDelegate <NSObject>
 
 @optional
-- (void)svgaPlayerDidFinishedAnimation:(SVGAPlayer *)player ;
+- (void)svgaPlayerDidFinishedAnimation:(SVGAPlayer *)player;
 
 - (void)svgaPlayer:(SVGAPlayer *)player didAnimatedToFrame:(NSInteger)frame;
 - (void)svgaPlayer:(SVGAPlayer *)player didAnimatedToPercentage:(CGFloat)percentage;
@@ -41,6 +41,7 @@ typedef void(^SVGAPlayerDynamicDrawingBlock)(CALayer *contentLayer, NSInteger fr
 - (void)clear;
 - (void)stepToFrame:(NSInteger)frame andPlay:(BOOL)andPlay;
 - (void)stepToPercentage:(CGFloat)percentage andPlay:(BOOL)andPlay;
+- (void)clearVideoItem:(NSString *)cacheKey;
 
 #pragma mark - Dynamic Object
 
